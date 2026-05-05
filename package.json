@@ -1,0 +1,31 @@
+{
+  "name": "the-daily-redline",
+  "version": "1.0.0",
+  "description": "Premium daily automotive newsletter powered by Claude AI",
+  "type": "module",
+  "main": "newsletter.js",
+  "scripts": {
+    "start": "node newsletter.js",
+    "dev": "DRY_RUN=true node newsletter.js",
+    "test": "echo \"Tests would go here\""
+  },
+  "keywords": [
+    "newsletter",
+    "automotive",
+    "ai",
+    "claude",
+    "email"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.28.0",
+    "@sendgrid/mail": "^8.1.0",
+    "dotenv": "^16.4.5",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
