@@ -1,0 +1,54 @@
+name: The Daily Dive — Newsletter
+
+on:
+  schedule:
+    # ─────────────────────────────────────────────────
+    # 5:30 AM PDT  (UTC-7, Mar–Nov) = 12:30 UTC
+    # 5:30 AM PST  (UTC-8, Nov–Mar) = 13:30 UTC
+    #
+    # This cron uses 12:30 UTC (correct for PDT).
+    # In winter (PST) it will run at 4:30 AM local.
+    # To target 5:30 AM year-round, use a tool like
+    # https://crontab.guru and adjust seasonally,
+    # OR switch to 13:00 UTC as a middle ground.
+    # ─────────────────────────────────────────────────
+    - cron: '30 12 * * *'
+
+  # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no email sent)'
+        required: false
+        default: 'false'
+
+jobs:
+  send-newsletter:
+    name: Generate and Send Newsletter
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run newsletter
+        run: node newsletter.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SENDGRID_API_KEY:  ${{ secrets.SENDGRID_API_KEY }}
+          FROM_EMAIL:        ${{ secrets.FROM_EMAIL }}
+          TO_EMAIL:          ${{ secrets.TO_EMAIL }}
+          DRY_RUN:           ${{ github.event.inputs.dry_run || 'false' }}
+          MAX_ARTICLES:      20
+          # Set DEBUG=true to print full stack traces on errors
+          # DEBUG: true
