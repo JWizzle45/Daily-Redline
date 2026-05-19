@@ -1,0 +1,18 @@
+{ 
+  "name": "scuba-diving-newsletter",
+  "version": "1.0.0",
+  "description": "Daily scuba diving newsletter powered by Claude AI",
+  "main": "newsletter.js", 
+  "scripts": { 
+    "start": "node newsletter.js",
+    "test": "node newsletter.js" 
+  },
+  "dependencies": { 
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@sendgrid/mail": "^8.1.0",
+    "rss-parser": "^3.13.0" 
+  },
+  "engines": {
+    "node": ">=18.0.0" 
+  } 
+}
