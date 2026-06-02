@@ -29,7 +29,7 @@ const CONFIG = {
   FROM_EMAIL        : process.env.FROM_EMAIL,
   TO_EMAIL          : process.env.TO_EMAIL,
   DRY_RUN           : process.env.DRY_RUN === "true",
-  MAX_ARTICLES      : parseInt(process.env.MAX_ARTICLES || "20", 10),
+  MAX_ARTICLES      : parseInt(process.env.MAX_ARTICLES || "100", 10),
   MODEL             : "claude-sonnet-4-5",
   MAX_TOKENS        : 8000,
 };
