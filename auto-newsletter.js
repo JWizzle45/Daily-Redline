@@ -29,7 +29,7 @@ const CONFIG = {
   FROM_EMAIL        : process.env.FROM_EMAIL,
   TO_EMAIL          : process.env.TO_EMAIL,
   DRY_RUN           : process.env.DRY_RUN === "true",
-  MAX_ARTICLES      : parseInt(process.env.MAX_ARTICLES || "100", 10),
+  MAX_ARTICLES      : parseInt(process.env.MAX_ARTICLES || "20", 10),
   MODEL             : "claude-sonnet-4-5",
   MAX_TOKENS        : 8000,
 };
@@ -55,8 +55,23 @@ const RSS_FEEDS = [
   "https://www.theverge.com/cars/rss/index.xml",            // The Verge — auto tech
   "https://www.roadandtrack.com/feeds/latest.xml",          // Road & Track
   "https://feeds.autoblog.com/weblog/",                     // AutoBlog
-  // "https://www.caranddriver.com/rss/all.xml",            // Car and Driver
-  // "https://www.motortrend.com/feeds/latest.xml",         // MotorTrend
+  "https://www.caranddriver.com/rss/all.xml",            // Car and Driver
+  "https://www.motortrend.com/feeds/latest.xml",         // MotorTrend
+  
+  "https://www.thedrive.com/feed",                             // The Drive
+  "https://www.carscoops.com/feed/",                           // Carscoops
+  "https://www.autonews.com/rss.xml",                  // Automotive News
+  "https://www.motor1.com/rss/news/all/",                      // Motor1
+  "https://www.autocar.co.uk/rss",                     // Autocar
+  "https://www.topgear.com/car-news/rss.xml",          // Top Gear
+  "https://www.hagerty.com/media/feed/",                       // Hagerty
+  "https://www.speedhunters.com/feed/",                        // Speedhunters
+  
+  "https://www.reddit.com/r/cars/.rss",                    // broad car discussion
+  "https://www.reddit.com/r/projectcar/.rss",              // builds/projects
+  "https://www.reddit.com/r/Justrolledintotheshop/.rss",   // mechanic/shop culture
+  "https://www.reddit.com/r/Autos/.rss",                   // general auto content
+  "https://www.reddit.com/r/whatcarshouldIbuy/.rss",       // buyer trends
 ];
 
 // ─────────────────────────────────────────────
