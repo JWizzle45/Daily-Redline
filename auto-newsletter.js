@@ -49,29 +49,32 @@ if (missing.length) {
 // ─────────────────────────────────────────────
 
 const RSS_FEEDS = [
-  "https://www.bloomberg.com/pursuits/autos",           // Bloomberg — auto news
-  "https://www.cnbc.com/autos",  // CNBC — auto industry
-  "https://jalopnik.com/",                                // Jalopnik — car culture
-  "https://www.theverge.com/cars",            // The Verge — auto tech
-  "https://www.roadandtrack.com/news/",          // Road & Track
-  //"https://feeds.autoblog.com/weblog/",                     // AutoBlog
-  "https://www.caranddriver.com",                        // Car and Driver
-  "https://www.motortrend.com",         // MotorTrend
+  "https://feeds.bloomberg.com/markets/news.rss",              // Bloomberg - markets/industry
+  "https://www.cnbc.com/id/10003114/device/rss/rss.html",      // CNBC - auto industry
+  "https://jalopnik.com/rss",                                  // Jalopnik - car culture
+  "https://www.theverge.com/cars/rss/index.xml",               // The Verge - auto tech/EVs
+  "https://www.roadandtrack.com/feeds/latest.xml",             // Road & Track
+  "https://feeds.autoblog.com/weblogsinc/autoblog",            // AutoBlog
   
-  "https://www.thedrive.com/",                             // The Drive
-  "https://www.carscoops.com/",                           // Carscoops
-  "https://www.autonews.com/",                  // Automotive News
-  "https://www.motor1.com/news/",                      // Motor1
-  "https://www.autocar.co.uk",                     // Autocar
-  "https://www.topgear.com/car-news/",          // Top Gear
-  "https://www.hagerty.com/media/",                       // Hagerty
-  "https://www.speedhunters.com/",                        // Speedhunters
+  "https://www.caranddriver.com/rss/all.xml",          // Car and Driver
+  "https://www.motortrend.com/rss/",                   // MotorTrend
+  "https://www.thedrive.com/feed",                     // The Drive
+  "https://www.carscoops.com/feed/",                   // Carscoops
+  "https://www.autonews.com/rss.xml",                  // Automotive News
+  "https://www.motor1.com/rss/news/all/",              // Motor1
+  "https://www.autocar.co.uk/rss",                     // Autocar
+  "https://www.topgear.com/car-news/rss.xml",          // Top Gear
+  "https://www.hagerty.com/media/feed/",               // Hagerty
+  "https://www.speedhunters.com/feed/",                // Speedhunters
   
-  "https://www.reddit.com/r/cars/",                    // broad car discussion
-  "https://www.reddit.com/r/projectcar/s",              // builds/projects
-  "https://www.reddit.com/r/Justrolledintotheshop/",   // mechanic/shop culture
-  "https://www.reddit.com/r/Autos/",                   // general auto content
-  "https://www.reddit.com/r/whatcarshouldIbuy/",       // buyer trends
+  "https://www.reddit.com/r/cars/.rss",
+  "https://www.reddit.com/r/Cartalk/.rss",
+  "https://www.reddit.com/r/projectcar/.rss",
+  "https://www.reddit.com/r/Justrolledintotheshop/.rss",
+  "https://www.reddit.com/r/MechanicAdvice/.rss",
+  "https://www.reddit.com/r/Autos/.rss",
+  "https://www.reddit.com/r/carmodification/.rss",
+  "https://www.reddit.com/r/whatcarshouldIbuy/.rss",
 ];
 
 // ─────────────────────────────────────────────
